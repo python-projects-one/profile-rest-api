@@ -32,6 +32,9 @@ MANIFEST
 *.manifest
 *.spec
 
+#steps file
+config_steps.txt
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

@@ -39,6 +39,45 @@ vagrant ssh
 
 ##Vagrant will automatically update the files on the created server
 #with updates we make on our local machine (/vagrant)
+#cd /vagrant
+
+#create py virtual env in /vagrant
+#eg.. python -m venv ~/myenv
+
+#activate environment
+source ~/myenv/bin/activate
+
+#create requirements.txt file in local project directory
+#add packages to the files
+#django=2.2, djangorestframework
+
+#install packages in the requirements.txt files on the
+#vagrant server
+pip install -r requirements.txt
+
+#Start the project and app
+django-admin.py startproject profiles_project .
+
+#create app
+python manage.py startapp profiles_api
+
+#enable the app in the project settings
+#- go to project_directory -> settings.py
+#- Add the app to the INSTALLED_APPS list
+##- 'rest_framework',
+##'rest_framework.authtoken',
+##'profiles_api'
+
+#test changes
+python manage.py migrate
+
+python manage.py runserver 0.0.0.0:8000
+
+#stop server
+CTRL+C
+
+
+
 
 
 ###Troubleshooting
