@@ -33,7 +33,7 @@ MANIFEST
 *.spec
 
 #steps file
-*steps.*
+config-steps.*
 
 # Installer logs
 pip-log.txt
